@@ -1,0 +1,43 @@
+import random
+
+mainList = ["rock","paper","scissor"];
+print("Play rock paper scissor with Rishik")
+winScore = input("Enter the winning score : ")
+print("Rule: who reaches the winning score first will win")
+count = 0
+rishikScore = 0
+userScore = 0
+print("Scores:")
+print("Rishik Score : "+str(rishikScore))
+print("Your Score : "+str(userScore))
+while True:
+    nextGame = ""
+    userInput = input("Enter the Input (rock,paper,scissor) : ")
+    systemInput = random.choice(mainList)
+    print(systemInput)
+    if userInput in mainList:
+        if (userInput == "rock" and systemInput == "paper") or (userInput == "paper" and systemInput == "scissor") or (userInput == "scissor" and systemInput == "rock"):
+            print("You Lost")
+            rishikScore += 1
+            print("Scores:")
+            print("Rishik Score : "+str(rishikScore))
+            print("Your Score : "+str(userScore))
+        elif userInput == systemInput:
+            print("Tied")
+        else:
+            print("You Won")
+            userScore += 1
+            print("Scores:")
+            print("Rishik Score : "+str(rishikScore))
+            print("Your Score : "+str(userScore))
+    if winScore == rishikScore:
+        print("Rishik Won")
+        
+    elif winScore == userScore:
+        print("You Won")
+        
+        
+            
+        
+    
+    
