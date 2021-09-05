@@ -23,7 +23,7 @@ while True:
             print("Rishik Score : "+str(rishikScore))
             print("Your Score : "+str(userScore))
         elif userInput == systemInput:
-            print("Tied")
+            print("Both are Tied")
         else:
             print("You Won")
             userScore += 1
