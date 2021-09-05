@@ -3,7 +3,7 @@ import random
 mainList = ["rock","paper","scissor"];
 print("Play rock paper scissor with Rishik")
 winScore = input("Enter the winning score : ")
-print("Rule: who reaches the winning score first will win")
+print("Rule: who reaches the winning score first will win.")
 count = 0
 rishikScore = 0
 userScore = 0
@@ -12,9 +12,9 @@ print("Rishik Score : "+str(rishikScore))
 print("Your Score : "+str(userScore))
 while True:
     nextGame = ""
-    userInput = input("Enter the Input (rock,paper,scissor) : ")
+    userInput = input("Your Input (rock,paper,scissor) : ")
     systemInput = random.choice(mainList)
-    print(systemInput)
+    print("Rishik's Input : "+systemInput)
     if userInput in mainList:
         if (userInput == "rock" and systemInput == "paper") or (userInput == "paper" and systemInput == "scissor") or (userInput == "scissor" and systemInput == "rock"):
             print("You Lost")
@@ -30,14 +30,13 @@ while True:
             print("Scores:")
             print("Rishik Score : "+str(rishikScore))
             print("Your Score : "+str(userScore))
-    if winScore == rishikScore:
-        print("Rishik Won")
+    else:
+        print("Please Enter Valid Input.")
+        continue;
+    if int(winScore) == rishikScore:
+        print("Rishik Won the Game")
+        break
+    elif int(winScore) == userScore:
+        print("You Won the Game")
+        break
         
-    elif winScore == userScore:
-        print("You Won")
-        
-        
-            
-        
-    
-    
